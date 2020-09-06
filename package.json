@@ -20,12 +20,12 @@
     "asar": false
   },
   "scripts": {
-    "start": "concurrently \"yarn start:main\" \"yarn start:renderer\"",
+    "start": "concurrently \"npm run start:main\" \"npm run start:renderer\"",
     "start:main": "electron-webpack dev",
-    "start:renderer": "BROWSER=none APP_ROOT=src/renderer umi dev",
-    "build-main-prod": "NODE_ENV=production webpack --config ./build/webpack.main.prod.config.js",
-    "build-main-dev": "NODE_ENV=development webpack --config ./build/webpack.main.config.js",
-    "build:renderer": "APP_ROOT=src/renderer umi build",
+    "start:renderer": "cross-env BROWSER=none APP_ROOT=src/renderer umi dev",
+    "build-main-prod": "cross-env NODE_ENV=production webpack --config ./build/webpack.main.prod.config.js",
+    "build-main-dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.main.config.js",
+    "build:renderer": "cross-env APP_ROOT=src/renderer umi build",
     "watch": "tsc -w",
     "test": "jest",
     "lint": "tslint -c tslint.json -p tsconfig.json",
@@ -56,6 +56,7 @@
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
     "electron": "^4.0.5",
     "electron-builder": "^20.38.5",
     "electron-debug": "^2.0.0",
