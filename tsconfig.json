@@ -22,6 +22,7 @@
     "paths": {
       "*": ["node_modules/*"]
     },
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*"
