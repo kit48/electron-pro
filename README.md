@@ -48,6 +48,10 @@ $ yarn run dist
 
 ## Q & A
 
+### yarn 的使用
+
+由于国内环境的原因，需要使用国内镜像源或者启用代理，参考 [.yarmrc.yml](./.yarmrc.yml)
+
 ### 打包时资源下载过慢或超时
 
 设置资源镜像地址，参考 [.npmrc](./.npmrc#L1)
