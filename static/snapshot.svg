@@ -1,11 +1,12 @@
 <!-- Credit : https://github.com/sindresorhus/css-in-readme-like-wat -->
-<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 984 742" width="984" height="742" xmlns="http://www.w3.org/2000/svg">
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
 				.container {
 					width: 100%;
 					border-radius: 10px;
+					box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 				}
 			</style>
 			<div class="container">
