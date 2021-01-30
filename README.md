@@ -46,6 +46,10 @@ $ yarn run pack
 $ yarn run dist
 ```
 
+## 致谢
+
+- [wangtianlun/umi-electron-typescript](https://github.com/wangtianlun/umi-electron-typescript)
+
 ## Q & A
 
 ### yarn 的使用
