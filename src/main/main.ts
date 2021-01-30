@@ -27,8 +27,8 @@ function createWindow() {
   } else {
     mainWindow.loadURL(
       url.format({
-        pathname: path.join(__dirname, './dist/renderer/index.html'),
-        protocol: 'file:',
+        pathname: path.join(__dirname, './index.html'),
+        protocol: 'file',
         slashes: true,
       }),
     );

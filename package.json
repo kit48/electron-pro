@@ -6,9 +6,7 @@
   "private": true,
   "build": {
     "files": [
-      "dist/",
-      "node_modules/",
-      "package.json"
+      "!node_modules/"
     ],
     "mac": {
       "category": "your.app.category.type"
@@ -45,9 +43,16 @@
     "Umi",
     "TypeScript"
   ],
+  "author": {
+    "name": "theprimone",
+    "email": "yuns.xie@qq.com",
+    "url": "https://github.com/theprimone"
+  },
+  "dependencies": {
+    "umi": "^3.3.7"
+  },
   "devDependencies": {
     "@umijs/preset-react": "^1.7.13",
-    "awesome-typescript-loader": "^5.2.1",
     "concurrently": "^5.1.0",
     "cross-env": "^7.0.2",
     "electron": "^11.2.1",
@@ -57,7 +62,7 @@
     "electron-webpack-ts": "^4.0.1",
     "jest": "^24.9.0",
     "prettier": "1.16.4",
-    "ts-loader": "^5.3.3",
+    "ts-loader": "^8.0.14",
     "tslint": "^5.10.0",
     "typescript": "^4.1.3",
     "uglifyjs-webpack-plugin": "^2.1.1",
@@ -72,9 +77,6 @@
     "renderer": {
       "sourceDirectory": null
     }
-  },
-  "dependencies": {
-    "umi": "^3.3.7"
   },
   "__npminstall_done": false
 }

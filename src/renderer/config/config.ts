@@ -7,7 +7,7 @@ import routes from './routes';
 export default defineConfig ({
   antd: {},
   history: {
-    type: 'browser',
+    type: 'hash',
   },
   title: 'Electron Pro',
   dynamicImport: {},

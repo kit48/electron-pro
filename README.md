@@ -8,7 +8,9 @@
 
 <img alt="Electron-Pro-Snapshot" src="static/snapshot.svg" width="100%" />
 
-## 安装
+## 如何使用？
+
+### 安装
 
 通过 git 克隆仓库到本地
 
@@ -26,13 +28,13 @@ $ git clone https://github.com/kit48/electron-pro.git
 $ yarn
 ```
 
-## 开发
+### 开发
 
 ```shell
 $ yarn start
 ```
 
-## 打包
+### 打包
 
 ```shell
 $ yarn run pack
@@ -43,3 +45,17 @@ $ yarn run pack
 ```shell
 $ yarn run dist
 ```
+
+## Q & A
+
+### 打包时资源下载过慢或超时
+
+设置资源镜像地址，参考 [.npmrc](./.npmrc#L1)
+
+### 路由模式的选择
+
+只能使用 hash 路由，打包后通过静态文件访问，history 路由不可正常使用。
+
+### 自定义打包文件
+
+详见 electron-builder 官方文档关于 [Application Contents](https://www.electron.build/configuration/contents) 的说明。

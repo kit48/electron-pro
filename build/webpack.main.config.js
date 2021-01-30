@@ -1,6 +1,6 @@
-const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+
 const baseConfig = require('./webpack.base.config');
 
 module.exports = merge.smart(baseConfig, {
@@ -12,7 +12,7 @@ module.exports = merge.smart(baseConfig, {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/,
       },
     ],
