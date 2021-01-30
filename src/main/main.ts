@@ -4,17 +4,17 @@ import { app, BrowserWindow } from 'electron';
 
 import setApplicationMenu from './utils/menu';
 
-let mainWindow: Electron.BrowserWindow | null;
+let win: Electron.BrowserWindow | null;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({
+  win = new BrowserWindow({
     height: 600,
     width: 800,
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
       enableRemoteModule: true,
-    }
+    },
   });
 
   setApplicationMenu();
@@ -22,10 +22,10 @@ function createWindow() {
   global.title = 'Yay! Welcome to Electron Pro!';
 
   if (process.env.NODE_ENV === 'development') {
-    mainWindow.loadURL('http://localhost:8000/#/');
-    mainWindow.webContents.openDevTools();
+    win.loadURL('http://localhost:8000/#/');
+    win.webContents.openDevTools();
   } else {
-    mainWindow.loadURL(
+    win.loadURL(
       url.format({
         pathname: path.join(__dirname, './index.html'),
         protocol: 'file',
@@ -34,8 +34,25 @@ function createWindow() {
     );
   }
 
-  mainWindow.on('closed', () => {
-    mainWindow = null;
+  /** 
+   * 根据[官方文档](https://www.electronjs.org/docs/api/web-contents#contentssetdevtoolswebcontentsdevtoolswebcontents)的介绍
+   * “developers have very limited control of” 推测不能在 DevTools 中监听按键事件，故当前无法在聚焦 DevTools 通过 F12 关闭 DevTools。
+   */
+  win.webContents.on('before-input-event', (_, input) => {
+    if (
+      input.key.toLowerCase() === 'f12' &&
+      input.type.toLowerCase() === 'keyup' &&
+      !input.control &&
+      !input.shift &&
+      !input.alt &&
+      !input.meta
+    ) {
+      win?.webContents.toggleDevTools();
+    }
+  });
+
+  win.on('closed', () => {
+    win = null;
   });
 }
 
@@ -48,7 +65,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-  if (mainWindow === null) {
+  if (win === null) {
     createWindow();
   }
 });

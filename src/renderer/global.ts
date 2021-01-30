@@ -1,0 +1,1 @@
+console.log('[electron-pro]: Hello, world!')
