@@ -1,4 +1,7 @@
 node_modules
+yarn-error.log
 dist
-src/renderer/pages/.umi
 release
+
+.umi
+src/renderer/pages/.umi

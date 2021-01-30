@@ -10,6 +10,11 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
+    webPreferences: {
+      contextIsolation: false,
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    }
   });
 
   setApplicationMenu();

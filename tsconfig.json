@@ -20,7 +20,8 @@
     "strictPropertyInitialization": false,
     "noEmit": false,
     "paths": {
-      "*": ["node_modules/*"]
+      "*": ["node_modules/*"],
+      "@@/*": ["src/renderer/.umi/*"]
     },
     "skipLibCheck": true
   },

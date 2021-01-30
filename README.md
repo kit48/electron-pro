@@ -18,26 +18,28 @@ $ git clone https://github.com/kit48/electron-pro.git
 
 安装依赖
 
+> [Yarn](http://yarnpkg.com/) is [strongly](https://github.com/electron-userland/electron-builder/issues/1147#issuecomment-276284477) recommended instead of npm.
+>
+> by https://www.electron.build/#installation
+
 ```shell
-$ npm install
-# or
 $ yarn
 ```
 
 ## 开发
 
 ```shell
-$ npm start
+$ yarn start
 ```
 
 ## 打包
 
 ```shell
-$ npm run pack
+$ yarn run pack
 ```
 
 如果想打包成一个 dmg 或 zip 文件，可以以下命令实现
 
 ```shell
-$ npm run dist
+$ yarn run dist
 ```
