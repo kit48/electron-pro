@@ -1,7 +1,7 @@
 {
-  "name": "umi-electron-typescript",
+  "name": "electron-pro",
   "version": "1.0.0",
-  "description": "an example based on umijs + electron + typescript",
+  "description": "Electron template with Umi and TypeScript.",
   "main": "./dist/main/main.js",
   "private": true,
   "build": {
@@ -16,7 +16,7 @@
     "directories": {
       "output": "release"
     },
-    "appId": "com.wangtianlun.umi-electron-typescript",
+    "appId": "com.theprimone.electron-pro",
     "asar": false
   },
   "scripts": {
@@ -42,17 +42,9 @@
   "repository": "https://github.com/wangtianlun/umi-electron-typescript",
   "keywords": [
     "Electron",
-    "umi",
-    "quick",
-    "start",
-    "tutorial",
-    "demo",
-    "typescript"
+    "Umi",
+    "TypeScript"
   ],
-  "author": {
-    "name": "wangtianlun",
-    "email": "chongxinkaishi8188@gmail.com"
-  },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "concurrently": "^5.1.0",

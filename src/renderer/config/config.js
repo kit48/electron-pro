@@ -11,7 +11,7 @@ export default {
         antd: true,
         dva: true,
         dynamicImport: true,
-        title: 'umi-electron-typescript',
+        title: 'Electron Pro',
         dll: true,
         routes: {
           exclude: [],

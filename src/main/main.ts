@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as url from 'url';
 import { app, BrowserWindow } from 'electron';
+
 import setApplicationMenu from './utils/menu';
 
 let mainWindow: Electron.BrowserWindow | null;
@@ -13,7 +14,7 @@ function createWindow() {
 
   setApplicationMenu();
 
-  global.title = 'Yay! Welcome to umi-electron-typescript!';
+  global.title = 'Yay! Welcome to Electron Pro!';
 
   if (process.env.NODE_ENV === 'development') {
     mainWindow.loadURL('http://localhost:8000/#/');

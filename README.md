@@ -1,57 +1,41 @@
-# umi-electron-typescript
+# Electron Pro
 
-### An example based on umijs + electron + typescript
+### 基于 [Umi](https://umijs.org/) 和 [TypeScript](https://www.typescriptlang.org/) 的 [Electron](https://www.electronjs.org/) 模板
 
-[![Umi](https://img.souche.com/f2e/a92fc3dfdb4918578861c42bbfcfaf7f.png)](https://umijs.org/)
-[![Webpack](https://img.souche.com/f2e/cdc96229f3f9b7068a9b13f7658a9b0e.png)](https://webpack.js.org/)
-[![TypeScript](https://img.souche.com/f2e/abaffc28828246dcca08eae82a0b34c3.png)](https://www.typescriptlang.org/)
-[![Electron](https://img.souche.com/f2e/4f18b23a82d106ce023cdaf17c6dfd51.png)](https://electronjs.org/)
+## 安装
 
-[访问中文版](https://github.com/wangtianlun/umi-electron-typescript/blob/master/README.zh-CN.md)
+通过 git 克隆仓库到本地
 
-## Features
-- Support hot reload for main process and renderer process
-- Support typescript
-
-## Install
-
-First, clone the repo via git:
-
-```javascript
-  git clone git@github.com:wangtianlun/umi-electron-typescript.git
+```shell
+$ git clone https://github.com/kit48/electron-pro.git
 ```
 
-And then install the dependencies with yarn
+安装依赖
 
-```javascript
-  $ yarn
+```shell
+$ npm install
+# or
+$ yarn
 ```
 
-## Starting Development
+## 开发
 
-```javascript
-  $ yarn start
+```shell
+$ npm start
 ```
 
-## Packaging
+## 打包
 
-```javascript
-  $ npm run pack
+```shell
+$ npm run pack
 ```
 
-If you want to package into dmg(on mac) or zip, you can follow below
+如果想打包成一个 dmg 或 zip 文件，可以以下命令实现
 
-```javascript
-  $ npm run dist
+```shell
+$ npm run dist
 ```
 
-If you want to package all platforms(eg: mac, windows, linux), you can follow below
+## 应用截图
 
-```javascript
-  $ npm run dist-all
-```
-
-## screenshot
-
-![umi-electron-typescript-image](https://img.souche.com/f2e/f26a29f3232f33dfa1ade9b48df64b6b.png)
-
+<img alt="Electron-Pro-Snapshot" src="static/snapshot.svg" width="100%" />
