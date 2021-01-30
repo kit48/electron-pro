@@ -1,6 +1,12 @@
-# Electron Pro
+<h1 align="center">Electron Pro</h1>
 
-### 基于 [Umi](https://umijs.org/) 和 [TypeScript](https://www.typescriptlang.org/) 的 [Electron](https://www.electronjs.org/) 模板
+<div align="center">
+
+基于 [Umi](https://umijs.org/) 和 [TypeScript](https://www.typescriptlang.org/) 的 [Electron](https://www.electronjs.org/) 模板
+
+</div>
+
+<img alt="Electron-Pro-Snapshot" src="static/snapshot.svg" width="100%" />
 
 ## 安装
 
@@ -35,7 +41,3 @@ $ npm run pack
 ```shell
 $ npm run dist
 ```
-
-## 应用截图
-
-<img alt="Electron-Pro-Snapshot" src="static/snapshot.svg" width="100%" />
