@@ -1,4 +1,6 @@
-export default [
+import { IRoute } from 'umi';
+
+const Routes: IRoute[] = [
   {
     path: '/',
     component: './index',
@@ -8,3 +10,5 @@ export default [
     component: './Settings',
   },
 ];
+
+export default Routes;
