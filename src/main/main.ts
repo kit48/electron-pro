@@ -3,6 +3,7 @@ import * as url from 'url';
 import { app, BrowserWindow } from 'electron';
 
 import setApplicationMenu from './utils/menu';
+import { oneKeyInput } from './utils/key';
 
 let win: Electron.BrowserWindow | null;
 
@@ -34,20 +35,16 @@ function createWindow() {
     );
   }
 
-  /** 
+  /**
    * 根据[官方文档](https://www.electronjs.org/docs/api/web-contents#contentssetdevtoolswebcontentsdevtoolswebcontents)的介绍
    * “developers have very limited control of” 推测不能在 DevTools 中监听按键事件，故当前无法在聚焦 DevTools 通过 F12 关闭 DevTools。
    */
   win.webContents.on('before-input-event', (_, input) => {
-    if (
-      input.key.toLowerCase() === 'f12' &&
-      input.type.toLowerCase() === 'keyup' &&
-      !input.control &&
-      !input.shift &&
-      !input.alt &&
-      !input.meta
-    ) {
+    if (oneKeyInput(input, 'f12')) {
       win?.webContents.toggleDevTools();
+    }
+    if (oneKeyInput(input, 'f5')) {
+      win?.webContents.reload();
     }
   });
 
