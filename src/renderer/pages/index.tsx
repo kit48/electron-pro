@@ -1,14 +1,17 @@
-import { getGlobal } from '../utils/electron';
+import { Link } from 'umi';
 
-function Index() {
+import { getGlobal } from '@/utils/electron';
+import styles from './index.less';
+
+export default function Index() {
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>{ getGlobal('title') }</h1>
+      <h1>{getGlobal('title')}</h1>
       <br />
       <br />
-      <img src={require('../assets/yay.jpg')} width='400' />
+      <Link to='/settings'>
+        <img className={styles.image} src={require('../assets/yay.jpg')} width='400' />
+      </Link>
     </div>
   );
 }
-
-export default Index;
