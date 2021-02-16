@@ -49,9 +49,11 @@
     "url": "https://github.com/theprimone"
   },
   "dependencies": {
+    "react-transition-group": "^4.4.1",
     "umi": "^3.3.7"
   },
   "devDependencies": {
+    "@types/react-transition-group": "^4.4.0",
     "@umijs/fabric": "^2.5.6",
     "@umijs/preset-react": "^1.7.13",
     "concurrently": "^5.1.0",
@@ -72,7 +74,9 @@
   },
   "electronWebpack": {
     "main": {
-      "extraEntries": ["@/preload.js"],
+      "extraEntries": [
+        "@/preload.js"
+      ],
       "sourceDirectory": "src/main",
       "webpackConfig": "webpack.config.js"
     },
