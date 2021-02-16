@@ -3,5 +3,7 @@ yarn-error.log
 dist
 release
 
+# src/renderer/.umi - Umi 临时文件
 .umi
-src/renderer/pages/.umi
+# src/renderer/.umi-production - Umi 打包时临时文件
+.umi-production

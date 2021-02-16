@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 
-const isDevelopment = process.env.NODE_ENV !== 'production'
+const isDevelopment = process.env.NODE_ENV === 'development'
 
 const developmentConfig = {
   mode: 'development',
@@ -11,7 +11,7 @@ const developmentConfig = {
     main: './src/main/main.ts',
   },
   output: {
-    path: path.resolve(__dirname, '../dist/main'),
+    path: path.resolve(__dirname, './dist/main'),
     filename: '[name].js',
   },
   devtool: 'source-map',
