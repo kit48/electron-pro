@@ -54,11 +54,11 @@ $ yarn run dist
 
 ### yarn 的使用
 
-由于国内环境的原因，需要使用国内镜像源或者启用代理，参考 [.yarmrc.yml](./.yarmrc.yml)
+由于国内环境的原因，需要使用国内镜像源或者启用代理，参考 [.yarmrc.yml](./.yarmrc.yml)。
 
 ### 打包时资源下载过慢或超时
 
-设置资源镜像地址，参考 [.npmrc](./.npmrc#L1)
+设置资源镜像地址，参考 [.npmrc](./.npmrc#L1)。
 
 ### 路由模式的选择
 
@@ -67,3 +67,7 @@ $ yarn run dist
 ### 自定义打包文件
 
 详见 electron-builder 官方文档关于 [Application Contents](https://www.electron.build/configuration/contents) 的说明。
+
+### preload 脚本配置
+
+已在 package.json 中配置，详见 electron-webpack 官方文档[配置说明](https://webpack.electron.build/configuration)。

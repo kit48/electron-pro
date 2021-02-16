@@ -1,5 +1,8 @@
 declare module '*.less';
 
 interface Window {
-  require: typeof require;
+  g_umi: { version: string };
+
+  ipcRenderer: Electron.IpcRenderer;
+  _INFO: { [k: string]: any };
 }

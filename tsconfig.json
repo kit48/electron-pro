@@ -11,12 +11,13 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "noEmit": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
     "paths": {
       "#/*": ["./src/main/*"],
       "@/*": ["./src/renderer/*"],
       "@@/*": ["./src/renderer/.umi/*"]
-    },
-    "skipLibCheck": true
+    }
   },
   "include": ["src/**/*"],
   "extends": "./node_modules/electron-webpack/tsconfig-base.json"

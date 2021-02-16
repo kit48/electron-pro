@@ -1,10 +1,9 @@
-
 // https://umijs.org/config/
 import { defineConfig } from 'umi';
 
 import routes from './routes';
 
-export default defineConfig ({
+export default defineConfig({
   antd: {},
   history: {
     type: 'hash',

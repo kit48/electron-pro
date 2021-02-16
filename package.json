@@ -72,7 +72,9 @@
   },
   "electronWebpack": {
     "main": {
-      "sourceDirectory": "src/main"
+      "extraEntries": ["@/preload.js"],
+      "sourceDirectory": "src/main",
+      "webpackConfig": "webpack.config.js"
     },
     "renderer": {
       "sourceDirectory": null
