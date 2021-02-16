@@ -1,5 +1,5 @@
 import * as path from 'path';
-import * as url from 'url';
+import { format, pathToFileURL } from 'url';
 import { app, BrowserWindow } from 'electron';
 
 import setApplicationMenu from './utils/menu';
@@ -26,13 +26,7 @@ function createWindow() {
     win.loadURL('http://localhost:8000/#/');
     win.webContents.openDevTools();
   } else {
-    win.loadURL(
-      url.format({
-        pathname: path.join(__dirname, './index.html'),
-        protocol: 'file',
-        slashes: true,
-      }),
-    );
+    win.loadURL(format(pathToFileURL(path.join(__dirname, './index.html'))));
   }
 
   /**
