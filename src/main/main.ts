@@ -21,6 +21,7 @@ function createWindow() {
       enableRemoteModule: false,
       // 存在安全问题：https://www.electronjs.org/docs/tutorial/security#2-do-not-enable-nodejs-integration-for-remote-content
       nodeIntegration: false,
+      contextIsolation: false,
       preload: path.join(__dirname, './preload.js'),
     },
   });
