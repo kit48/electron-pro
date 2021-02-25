@@ -2,7 +2,6 @@ import { withRouter } from 'umi';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
 const TransitionLayout = withRouter(({ location, children }) => {
-  console.log('location', location.pathname);
   return (
     // https://reactcommunity.org/react-transition-group/switch-transition
     <SwitchTransition mode='out-in'>
@@ -10,9 +9,6 @@ const TransitionLayout = withRouter(({ location, children }) => {
         key={location.pathname}
         classNames='fade'
         timeout={500}
-        onExit={(node) => {
-          console.log(node);
-        }}
         addEndListener={(node: HTMLElement, done: () => void) => {
           node.addEventListener('transitionend', done, false);
         }}

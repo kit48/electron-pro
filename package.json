@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "react-transition-group": "^4.4.1",
-    "umi": "^3.3.7"
+    "umi": "^3.3.9"
   },
   "devDependencies": {
     "@types/react-transition-group": "^4.4.0",
