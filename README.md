@@ -8,6 +8,12 @@
 
 <img alt="Electron-Pro-Snapshot" src="static/snapshot.svg" width="100%" />
 
+## Features
+
+✔️ 页面切换动画<br />
+✔️ 渲染进程开发环境自动刷新<br />
+✔️ 主进程开发环境自动刷新<br />
+
 ## 如何使用？
 
 ### 安装
@@ -52,9 +58,13 @@ $ yarn run dist
 
 ## Q & A
 
+### [主进程开发环境下自动重启](https://github.com/kit48/electron-pro/issues/3)
+
+收集多方资料，尝试了 [electron-reloader](https://github.com/sindresorhus/electron-reloader) 和 [electron-reload](https://github.com/yan-foto/electron-reload) 都以失败告终，最后看到了一个这样的答案 [`nodemon --watch * --exec "electron ."`](https://stackoverflow.com/a/39250782/8335317)，遂尝试了一下，成功解决。
+
 ### yarn 的使用
 
-由于国内环境的原因，需要使用国内镜像源或者启用代理，参考 [.yarmrc.yml](./.yarmrc.yml)。
+由于国内环境的原因，需要使用国内镜像源或者启用代理，参考 [.yarnrc](./.yarnrc)。
 
 ### 打包时资源下载过慢或超时
 

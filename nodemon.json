@@ -1,0 +1,5 @@
+{
+  "watch": ["src/main/"],
+  "ignore": ["*.d.ts"],
+  "ext": "ts"
+}

@@ -2,7 +2,6 @@
   "name": "electron-pro",
   "version": "1.0.0",
   "description": "Electron template with Umi and TypeScript.",
-  "main": "./dist/main/main.js",
   "private": true,
   "build": {
     "files": [
@@ -19,7 +18,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run start:renderer\" \"npm run start:main\"",
-    "start:main": "electron-webpack dev",
+    "start:main": "nodemon --exec \"electron-webpack dev\"",
     "start:renderer": "cross-env BROWSER=none APP_ROOT=src/renderer umi dev",
     "build-main-dev": "cross-env NODE_ENV=development webpack",
     "build-main-prod": "cross-env NODE_ENV=production webpack",
@@ -64,6 +63,7 @@
     "electron-webpack": "^2.8.2",
     "electron-webpack-ts": "^4.0.1",
     "jest": "^24.9.0",
+    "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "ts-loader": "^8.0.14",
     "tslint": "^5.10.0",
