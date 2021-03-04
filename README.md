@@ -10,9 +10,7 @@
 
 ## Features
 
-✔️ 页面切换动画<br />
-✔️ 渲染进程开发环境自动刷新<br />
-✔️ 主进程开发环境自动刷新<br />
+✔️ 页面切换动画<br /> ✔️ 渲染进程开发环境自动刷新<br /> ✔️ 主进程开发环境自动刷新<br />
 
 ## 如何使用？
 
@@ -60,7 +58,11 @@ $ yarn run dist
 
 ### [主进程开发环境下自动重启](https://github.com/kit48/electron-pro/issues/3)
 
-收集多方资料，尝试了 [electron-reloader](https://github.com/sindresorhus/electron-reloader) 和 [electron-reload](https://github.com/yan-foto/electron-reload) 都以失败告终，最后看到了一个这样的答案 [`nodemon --watch * --exec "electron ."`](https://stackoverflow.com/a/39250782/8335317)，遂尝试了一下，成功解决。
+收集多方资料，尝试了 [electron-reloader](https://github.com/sindresorhus/electron-reloader) 和 [electron-reload](https://github.com/yan-foto/electron-reload) 都以失败告终，最后看到了一个这样的[答案](https://stackoverflow.com/a/39250782/8335317)：
+
+`nodemon --watch \* --exec "electron ."`
+
+沿着这个思路成功解决。
 
 ### yarn 的使用
 
