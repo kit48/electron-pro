@@ -62,7 +62,7 @@ $ yarn run dist
 
 `nodemon --watch \* --exec "electron ."`
 
-沿着这个思路成功解决。
+沿着这个思路成功解决 [823e7fe](https://github.com/kit48/electron-pro/commit/823e7fe121b7c7c40273e734cd9f0eb19b794673)。
 
 ### yarn 的使用
 
